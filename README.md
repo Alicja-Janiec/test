@@ -4,19 +4,19 @@ SOL (Safety Operating Limits) is an application that supports monitoring of oper
 ## Development environment
 Requirements
 
-· OpenJDK 11
+- OpenJDK 11
 - Docker
 
 After cloning the project you need to update your .env file
 
-\\\
+'''
 DB_USERNAME=
 DB_PASSWORD=
 SOL_PWSALT=
 PIWEBAPI_PASSWORD=
 OIDC_CLIENT_SECRET=
 COGNITE_CLIENT_SECRET=
-\\\
+'''
 
 To run applicaiton on docker you need 
 
