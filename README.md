@@ -27,6 +27,28 @@ or create configuration profile based on your docker-compose.
 
 <img width="818" height="755" alt="image" src="https://github.com/user-attachments/assets/8d7b3495-cb83-4a50-86d5-2a548ffc5afe" />
 
+then crowse your appliation under http://localhost:8080/
+
+For creating JUnit testing profile edit your JUnit template configuration and add environment variables from your .env file
+<img width="1239" height="869" alt="image" src="https://github.com/user-attachments/assets/17592173-6da8-4d0e-95bc-23601871157f" />
+
+Your Tests configuration should look like
+
+<img width="1094" height="911" alt="image" src="https://github.com/user-attachments/assets/4f6b9563-9a70-42ee-a48f-5857c4de4a96" />
+
+If for some reason you need to run database on your local, but only application in docker then create configuration:
+
+
+<img width="1052" height="880" alt="image" src="https://github.com/user-attachments/assets/c6baaf5e-e751-41c0-bf96-6de654df156d" />
+
+download and install SQL Server Developer 2019 and Microsoft SQL Management Studion.
+Create manually database named: "sol_db". Create login according to your .env file:
+DB_USERNAME=
+DB_PASSWORD=
+and give the login owner access to your database. Once you runc ytour Docker profile it will run flyway migrations creating tables and populating data for you.
+
+> **Note:**  Don't forget to stop the ms sql serivce once you wnat it run it back based on docker-compose file, which runs sql on localhost (same as you local db)
+
 ### Source code
 
 Running the application from source code
