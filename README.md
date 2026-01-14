@@ -1,70 +1,32 @@
-# test
-# SOL documentation 
-SOL (Safety Operating Limits) is an application that supports monitoring of operating limits during production activities on offshore platforms. The application allows to see sensors list, timeseries and excursions. It also allows you to create events based on excursions. It has some reporting functionality too.
-## Development environment
-Requirements
+# SOL Overview
 
-- OpenJDK 11
-- Docker
+SOL (Safety Operating Limits) is an application that supports monitoring of operating limits during production activities on offshore platforms. The application provides access to sensor lists, timeseries, and excursions. It also allows creating events based on excursions and includes basic reporting functionality.
+
+---
+
+## Development Environment
+
+### Requirements
+- **OpenJDK 11**
+- **Docker**
 - IntelliJ IDEA (optional)
 - SQL Server Developer 2019 (optional)
 - Microsoft SQL Management Studio 2022 (optional)
 
-After cloning the project you need to update your .env file
+---
 
-```
+### Environment Configuration
+
+After cloning the project, update your `.env` file:
+
+```env
 DB_USERNAME=
 DB_PASSWORD=
 SOL_PWSALT=
 PIWEBAPI_PASSWORD=
 OIDC_CLIENT_SECRET=
 COGNITE_CLIENT_SECRET=
-```
 
-To run application on docker you need to eiter run 
-
-```docker compose up --build```
-
-or create configuration profile based on your docker-compose.
-
-<img width="818" height="755" alt="image" src="https://github.com/user-attachments/assets/8d7b3495-cb83-4a50-86d5-2a548ffc5afe" />
-
-
-Then browse your appliation under http://localhost:8080/
-
-
-For creating JUnit testing profile edit your JUnit template configuration and add environment variables from your .env file
-
-<img width="1239" height="869" alt="image" src="https://github.com/user-attachments/assets/17592173-6da8-4d0e-95bc-23601871157f" />
-
-
-Your Tests configuration should look like
-
-
-<img width="1094" height="911" alt="image" src="https://github.com/user-attachments/assets/4f6b9563-9a70-42ee-a48f-5857c4de4a96" />
-
-
-If for some reason you need to run database on your local, but only application in docker then create configuration:
-
-
-<img width="1052" height="880" alt="image" src="https://github.com/user-attachments/assets/c6baaf5e-e751-41c0-bf96-6de654df156d" />
-
-
-download and install SQL Server Developer 2019 and Microsoft SQL Management Studion.
-Create manually database named: "sol_db". Create login according to your .env file:
-DB_USERNAME=
-DB_PASSWORD=
-and give the login owner access to your database. Once you runc ytour Docker profile it will run flyway migrations creating tables and populating data for you.
-
-
-<img width="1068" height="918" alt="image" src="https://github.com/user-attachments/assets/f9550239-bf5a-4268-a695-c8f265df729b" />
-
-
-> **Note:**  Don't forget to stop the ms sql serivce once you wnat it run it back based on docker-compose file, which runs sql on localhost (same as you local db)
-
-
-
-<img width="790" height="417" alt="image" src="https://github.com/user-attachments/assets/bf82eb47-62ed-4756-87db-8c0f6b3aa811" />
 
 
 ### Source code
