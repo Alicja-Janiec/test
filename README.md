@@ -1,6 +1,6 @@
-# test
 # SOL documentation 
 SOL (Safety Operating Limits) is an application that supports monitoring of operating limits during production activities on offshore platforms. The application allows to see sensors list, timeseries and excursions. It also allows you to create events based on excursions. It has some reporting functionality too.
+
 ## Development environment
 Requirements
 
