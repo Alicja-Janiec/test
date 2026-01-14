@@ -6,6 +6,7 @@ Requirements
 
 - OpenJDK 11
 - Docker
+- IntelliJ IDEA (optional)
 
 After cloning the project you need to update your .env file
 
@@ -18,7 +19,13 @@ OIDC_CLIENT_SECRET=
 COGNITE_CLIENT_SECRET=
 ```
 
-To run applicaiton on docker you need 
+To run applicaiton on docker you need to eiter run 
+
+```docker compose up --build```
+
+or create configuration profile based on your docker-compose.
+
+<img width="818" height="755" alt="image" src="https://github.com/user-attachments/assets/8d7b3495-cb83-4a50-86d5-2a548ffc5afe" />
 
 ### Source code
 
